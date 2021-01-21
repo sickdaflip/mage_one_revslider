@@ -1,6 +1,7 @@
 {
     "name": "sickdaflip/mage_one_revslider",
     "description": "Magento 1 Revslider",
+    "type": "magento-module",
     "license": "MIT License",
     "require": {
         "magento-hackathon/magento-composer-installer": "*"
