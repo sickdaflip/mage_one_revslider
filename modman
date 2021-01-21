@@ -1,0 +1,11 @@
+app/code/community/Nwdthemes    app/code/community/Nwdthemes
+app/design/adminhtml/default/default/layout/nwdthemes
+app/design/adminhtml/default/default/template/nwdthemes
+app/design/frontend/base/default/layout/nwdthemes
+app/design/frontend/base/default/template/nwdthemes
+app/etc/modules/*.xml   app/etc/modules/
+app/locale/*/*.csv  app/locale/
+js/nwdthemes    js/nwdthemes
+lib/Nwdthemes   lib/Nwdthemes
+skin/adminhtml/default/default/nwdthemes    skin/adminhtml/default/default/nwdthemes
+skin/frontend/base/default/nwdthemes    skin/frontend/base/default/nwdthemes

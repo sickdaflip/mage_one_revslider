@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<layout version="1.0.0">
+
+	<nwdrevslider_common>
+		<reference name="head">
+			<action method="setTemplate"><template>nwdthemes/revslider/page/head.phtml</template></action>
+			<block type="nwdrevslider/adminhtml_block_template" name="thickbox.js" as="thickbox.js" template="nwdthemes/revslider/head/thickbox.phtml" />
+            <action method="addItem"><type>skin_css</type><name>nwdthemes/revslider/admin/assets/css/tp-color-picker.css</name></action>
+            <action method="addItem"><type>skin_css</type><name>nwdthemes/revslider/admin/assets/css/select2RS.css</name></action>
+            <action method="addItem"><type>skin_css</type><name>nwdthemes/revslider/public/assets/fonts/font-awesome/css/font-awesome.css</name></action>
+            <action method="addItem"><type>skin_css</type><name>nwdthemes/revslider/public/assets/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css</name></action>
+            <action method="addItem"><type>skin_css</type><name>nwdthemes/revslider/admin/assets/css/basics.css</name></action>
+            <action method="addItem"><type>skin_css</type><name>nwdthemes/revslider/admin/assets/css/builder.css</name></action>
+			<action method="addItem"><type>skin_css</type><name>nwdthemes/revslider/framework/css/jquery-ui-dialog.min.css</name></action>
+			<action method="addItem"><type>skin_css</type><name>nwdthemes/revslider/framework/css/buttons.css</name></action>
+			<action method="addItem"><type>skin_css</type><name>nwdthemes/revslider/framework/css/common.css</name></action>
+			<action method="addItem"><type>skin_css</type><name>nwdthemes/revslider/framework/css/dashicons.css</name></action>
+			<action method="addItem"><type>skin_css</type><name>nwdthemes/revslider/framework/css/edit.css</name></action>
+			<action method="addItem"><type>skin_css</type><name>nwdthemes/revslider/framework/css/forms.css</name></action>
+			<action method="addItem"><type>skin_css</type><name>nwdthemes/revslider/framework/css/list-tables.css</name></action>
+			<action method="addItem"><type>skin_css</type><name>nwdthemes/revslider/framework/css/color-picker.min.css</name></action>
+			<action method="addItem"><type>skin_css</type><name>nwdthemes/revslider/framework/css/revslider.css</name></action>
+			<action method="addItem"><type>js</type><name>nwdthemes/jquery-1.12.4.min.js</name></action>
+			<action method="addItem"><type>js</type><name>nwdthemes/jquery-migrate-1.2.1.min.js</name></action>
+			<action method="addItem"><type>js</type><name>nwdthemes/jquery.noconflict.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>nwdthemes/revslider/framework/js/jquery-ui.min.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>nwdthemes/revslider/framework/js/underscore.min.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>nwdthemes/revslider/framework/js/wp-util.min.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>nwdthemes/revslider/framework/js/iris.min.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>nwdthemes/revslider/framework/js/color-picker.min.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>nwdthemes/revslider/public/assets/js/revolution.tools.min.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>nwdthemes/revslider/admin/assets/js/admin.min.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>nwdthemes/revslider/admin/assets/js/plugins/select2RS.full.min.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>nwdthemes/revslider/admin/assets/js/plugins/clipboard.min.js</name></action>
+		</reference>
+        <remove name="helpbutton" />
+	</nwdrevslider_common>
+
+    <nwdrevslider_overview_layout>
+		<update handle="nwdrevslider_common" />
+		<reference name="head">
+			<action method="addItem"><type>skin_js</type><name>nwdthemes/revslider/admin/assets/js/modules/overview.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>nwdthemes/revslider/public/assets/js/rs6.min.js</name></action>
+		</reference>
+		<reference name="content">
+            <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/header" as="nwdrevslider/header" template="nwdthemes/revslider/header.phtml" />
+            <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/overview" as="nwdrevslider/overview" template="nwdthemes/revslider/overview.phtml">
+                <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/modals-general" as="nwdrevslider/modals-general" template="nwdthemes/revslider/modals-general.phtml" />
+                <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/modals-overview" as="nwdrevslider/modals-overview" template="nwdthemes/revslider/modals-overview.phtml" />
+                <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/modals-copyright" as="nwdrevslider/modals-copyright" template="nwdthemes/revslider/modals-copyright.phtml" />
+                <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/release_log" as="nwdrevslider/release_log" template="nwdthemes/revslider/release_log.phtml" />
+                <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/features/premade_template" as="nwdrevslider/features/premade_template" template="nwdthemes/revslider/features/premade_template.phtml" />
+                <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/features/object_library" as="nwdrevslider/features/object_library" template="nwdthemes/revslider/features/object_library.phtml" />
+                <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/features/layer_animations" as="nwdrevslider/features/layer_animations" template="nwdthemes/revslider/features/layer_animations.phtml" />
+                <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/features/add_ons" as="nwdrevslider/features/add_ons" template="nwdthemes/revslider/features/add_ons.phtml" />
+                <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/features/support" as="nwdrevslider/features/support" template="nwdthemes/revslider/features/support.phtml" />
+            </block>
+            <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/footer" as="nwdrevslider/footer" template="nwdthemes/revslider/footer.phtml" />
+		</reference>
+    </nwdrevslider_overview_layout>
+
+    <nwdrevslider_builder_layout>
+		<update handle="nwdrevslider_common" />
+		<reference name="head">
+			<action method="addItem"><type>skin_js</type><name>nwdthemes/revslider/admin/assets/js/editor.min.js</name></action>
+		</reference>
+		<reference name="content">
+            <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/header" as="nwdrevslider/header" template="nwdthemes/revslider/header.phtml" />
+            <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/builder" as="nwdrevslider/builder" template="nwdthemes/revslider/builder.phtml">
+                <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/modals-copyright" as="nwdrevslider/modals-copyright" template="nwdthemes/revslider/modals-copyright.phtml" />
+                <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/modals-general" as="nwdrevslider/modals-general" template="nwdthemes/revslider/modals-general.phtml" />
+                <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/builder-slider-forms" as="nwdrevslider/builder-slider-forms" template="nwdthemes/revslider/builder-slider-forms.phtml" />
+                <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/builder-nav-forms" as="nwdrevslider/builder-nav-forms" template="nwdthemes/revslider/builder-nav-forms.phtml" />
+                <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/builder-slide-forms" as="nwdrevslider/builder-slide-forms" template="nwdthemes/revslider/builder-slide-forms.phtml" />
+                <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/builder-layer-forms" as="nwdrevslider/builder-layer-forms" template="nwdthemes/revslider/builder-layer-forms.phtml" />
+                <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/modals-builder" as="nwdrevslider/modals-builder" template="nwdthemes/revslider/modals-builder.phtml" />
+                <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/builder-timeline" as="nwdrevslider/builder-timeline" template="nwdthemes/revslider/builder-timeline.phtml" />
+            </block>
+            <block type="nwdrevslider/adminhtml_block_template" name="nwdrevslider/footer" as="nwdrevslider/footer" template="nwdthemes/revslider/footer.phtml" />
+		</reference>
+    </nwdrevslider_builder_layout>
+
+	<nwdrevslider_images_common>
+		<reference name="head">
+			<action method="addCss"><name>lib/prototype/windows/themes/magento.css</name></action>
+			<action method="addItem"><type>js_css</type><name>extjs/resources/css/ext-all.css</name></action>
+			<action method="addItem"><type>js_css</type><name>prototype/windows/themes/default.css</name></action>
+			<action method="addJs"><script>extjs/ext-tree.js</script></action>
+			<action method="addJs"><script>extjs/fix-defer.js</script></action>
+			<action method="addJs"><script>extjs/ext-tree-checkbox.js</script></action>
+			<action method="addJs"><script>lib/uploader/flow.min.js</script></action>
+			<action method="addJs"><script>lib/uploader/fusty-flow.js</script></action>
+			<action method="addJs"><script>lib/uploader/fusty-flow-factory.js</script></action>
+			<action method="addJs"><script>mage/adminhtml/uploader/instance.js</script></action>
+			<action method="addItem"><type>skin_js</type><name>nwdthemes/revslider/framework/js/browser.js</name></action>
+		</reference>
+	</nwdrevslider_images_common>
+
+    <adminhtml_nwdrevslider_index>
+		<update handle="nwdrevslider_overview_layout" />
+	</adminhtml_nwdrevslider_index>
+
+	<adminhtml_nwdrevslider_sliders>
+		<update handle="nwdrevslider_overview_layout" />
+	</adminhtml_nwdrevslider_sliders>
+
+	<adminhtml_nwdrevslider_slide>
+		<update handle="nwdrevslider_images_common" />
+		<update handle="nwdrevslider_builder_layout" />
+	</adminhtml_nwdrevslider_slide>
+
+	<adminhtml_nwdimages_index>
+		<remove name="footer" />
+		<remove name="head" />
+		<reference name="left">
+		    <block name="wysiwyg_images.js" type="adminhtml/cms_wysiwyg_images_content" template="cms/browser/js.phtml" />
+		    <block name="wysiwyg_images.tree" type="adminhtml/cms_wysiwyg_images_tree" template="cms/browser/tree.phtml" />
+		</reference>
+	</adminhtml_nwdimages_index>
+
+	<adminhtml_nwdimages_contents>
+		<block name="wysiwyg_images.files" type="nwdrevslider/adminhtml_images_content_files" template="cms/browser/content/files.phtml" output="toHtml" />
+	</adminhtml_nwdimages_contents>
+
+	<adminhtml_nwdrevslider_error>
+		<reference name="content">
+		    <block type="nwdrevslider/adminhtml_block_template" name="slider_error" as="slider_error" template="nwdthemes/revslider/templates/error.phtml" />
+		</reference>
+	</adminhtml_nwdrevslider_error>
+
+</layout>

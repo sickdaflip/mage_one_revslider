@@ -1,0 +1,35 @@
+<?php
+/**
+ * Template Name: Slider Revolution Blank Template
+ * Template Post Type: post, page
+ * The template for displaying RevSlider on a blank page
+ */
+?>
+<!DOCTYPE html>
+<html <?php Mage::helper('nwdrevslider/framework')->language_attributes(); ?> class="no-js">
+	<head>
+		<meta charset="<?php Mage::helper('nwdrevslider/framework')->bloginfo('charset'); ?>">
+		<meta name="viewport" content="width=device-width">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<link rel="pingback" href="<?php Mage::helper('nwdrevslider/framework')->bloginfo('pingback_url'); ?>">
+		<style type="text/css">
+			body:before { display:none !important}
+			body:after { display:none !important}
+			body { background:transparent}
+		</style>
+		<script type="text/javascript" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS); ?>nwdthemes/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS); ?>nwdthemes/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS); ?>nwdthemes/jquery.noconflict.js"></script>
+		<script type="text/javascript" src="<?php echo $this->getSkinUrl('nwdthemes/revslider/public/assets/js/revolution.tools.min.js'); ?>"></script>
+		<script type="text/javascript" src="<?php echo $this->getSkinUrl('nwdthemes/revslider/public/assets/js/rs6.min.js'); ?>"></script>
+		<link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('nwdthemes/revslider/public/assets/css/rs6.css'); ?>" media="all" />
+		<?php echo Mage::helper('nwdrevslider')->getHeadIncludes(); ?>
+		<?php echo Mage::helper('nwdrevslider')->includeEnqueuedAssets(); ?>
+	</head>
+	<body <?php Mage::helper('nwdrevslider/framework')->body_class(); ?>>
+		<div>
+			<?php echo $content; ?>
+		</div>
+		<?php Mage::helper('nwdrevslider/framework')->wp_footer(); ?>
+	</body>
+</html>

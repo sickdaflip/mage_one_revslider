@@ -1,0 +1,88 @@
+<?php
+/**
+ * Provide an admin area view for the Slider Modal Options
+ *
+ * This file is used to markup the admin-facing aspects of the plugin.
+ * @author    ThemePunch <info@themepunch.com>
+ * @link      https://www.themepunch.com/
+ * @copyright 2019 ThemePunch
+ */
+?>
+
+<!--WELCOME MODAL-->
+<div class="rb-modal-wrapper" data-modal="rbm_welcomeModal">
+	<div class="rb-modal-inner">
+		<div class="rb-modal-content">
+			<div id="rbm_welcomeModal" class="rb_modal form_inner">
+				<div class="rbm_header"><span class="rbm_title"><?php echo $this->__('Welcome to Slider Revolution 6', 'revslider');?></span><i class="rbm_close material-icons">close</i></div>
+				<div class="rbm_content">
+					<div style="padding:80px 100px 0px">
+						<div id="welcome_logo"></div>
+						<div class="mcg_option_third_wraps">
+							<div class="st_slider mcg_guide_optionwrap mcg_option_third">
+								<div class="mcg_o_title"><?php echo $this->__('What\'s new?');?></div>
+								<div class="mcg_o_descp"><?php echo $this->__('Slider Revolution recieved a complete<br>makeover with Version 6.0.');?></div>
+								<div class="div25"></div>
+								<a  target="_blank" href="http://revolution6.themepunch.com/direct-customer-benefits/" class="basic_action_button autosize basic_action_lilabutton"><?php echo $this->__('More Info');?></a>
+							</div>
+							<div class="st_scene mcg_guide_optionwrap mcg_option_third">
+								<div class="mcg_o_title"><?php echo $this->__('Docs & FAQs');?></div>
+								<div class="mcg_o_descp"><?php echo $this->__('Checkout our all new Help Center<br>with updated 6.0 Support Material.');?></div>
+								<div class="div25"></div>
+								<a  target="_blank" href="https://www.themepunch.com/support-center" class="basic_action_button autosize basic_action_lilabutton"><?php echo $this->__('Help Center');?></a>
+							</div>
+							<div class="st_carousel mcg_guide_optionwrap mcg_option_third last">
+								<div class="mcg_o_title"><?php echo $this->__('Clear your Browser Cache');?></div>
+								<div class="mcg_o_descp"><?php echo $this->__('To make sure that all Slider Revolution files<br>are updated, please clear your cache.');?></div>
+								<div class="div25"></div>
+								<a  target="_blank" href="https://www.themepunch.com/faq/updating-make-sure-clear-caches/" class="basic_action_button autosize basic_action_lilabutton"><?php echo $this->__('How to?');?></a>
+							</div>
+						</div>
+						<div class="div75"></div>
+					</div>
+					<?php
+					if(Mage::helper('nwdrevslider/framework')->get_option('revslider-valid', 'false') == 'true') { ?>
+						<div id="open_welcome_register_form" class="big_purple_linkbutton"><?php echo $this->__('Lets get Started with ' );?> <b> <?php echo $this->__('Slider Revolution 6.0');?></b></div>
+					<?php } else { ?>
+						<div id="open_welcome_register_form" class="big_purple_linkbutton"><?php echo $this->__('Activate Slider Revolution to');?> <b> <i class="material-icons">lock</i> <?php echo $this->__('Unlock all Features');?></b></div>
+					<?php } ?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--GLOBAL SETTINGS MODAL-->
+<div class="rb-modal-wrapper" data-modal="rbm_globalsettings">
+	<div class="rb-modal-inner">
+		<div class="rb-modal-content">
+			<div id="rbm_globalsettings" class="rb_modal form_inner">
+				<div class="rbm_header"><i class="rbm_symbol material-icons">settings</i><span class="rbm_title"><?php echo $this->__('Global Settings', 'revslider');?></span><i class="rbm_close material-icons">close</i></div>
+				<div class="rbm_content">
+					<label_a><?php echo $this->__('Include libraries globally', 'revslider');?></label_a><input type="checkbox" class="easyinit globalinput" data-r="globals.allinclude"><span class="linebreak"></span>
+					<label_a><?php echo $this->__('List of pages to include RevSlider libraries ', 'revslider');?></label_a><input type="text" data-r="globals.includeids" class="easyinit globalinput" placeholder="<?php echo $this->__('(ie. cms_index_index,catalog_product_view,about-us)', 'revslider');?>"><span class="linebreak"></span>
+					<div class="div25"></div>
+					<label_a><?php echo $this->__('3rd Party Lazy Loading Data', 'revslider');?></label_a><input type="text" class="easyinit globalinput"  data-r="globals.lazyloaddata" placeholder="<?php echo $this->__('(i.e. lazy-src)', 'revslider'); ?>"><span class="linebreak"></span>
+					<div class="div25"></div>
+					<label_a><?php echo $this->__('Disable RS Font Awesome Library', 'revslider');?></label_a><input type="checkbox" class="easyinit globalinput" data-r="globals.fontawesomedisable"><span class="linebreak"></span>
+					<label_a><?php echo $this->__('Optional font loading URL', 'revslider');?></label_a><input type="text" class="easyinit globalinput" data-r="globals.fonturl" placeholder="<?php echo $this->__('(ie. http://fonts.useso.com/css?family for chinese Environment)', 'revslider');?>"><span class="linebreak"></span>
+					<label_a><?php echo $this->__('Enable google font download', 'revslider');?></label_a><select id="fontdownload" name="fontdownload" data-theme="inmodal" class="globalinput easyinit nosearchbox tos2" data-r="globals.fontdownload">
+									<option selected="selected" value="off"><?php echo $this->__('Load from Google','revslider');?></option>
+									<option value="preload"><?php echo $this->__('Preload from Google', 'revslider');?></option>
+									<option value="disable"><?php echo $this->__('Disable, Load on your own', 'revslider');?></option>
+								</select><span class="linebreak"></span>
+					<label_a></label_a><div id="rs_trigger_font_deletion" class="basic_action_button autosize"><i class="material-icons">build</i><?php echo $this->__('Update Preload Fonts', 'revslider'); ?></div>
+					<div class="div25"></div>
+					<label_a><?php echo $this->__('Default desktop content width', 'revslider');?></label_a><input type="text" class="easyinit globalinput" data-numeric="true" data-allowed="px" data-min="0" data-max="2400" data-r="globals.size.desktop"><span class="linebreak"></span>
+					<label_a><?php echo $this->__('Default notebook content width', 'revslider');?></label_a><input type="text" class="easyinit globalinput" data-numeric="true" data-allowed="px" data-min="0" data-max="2400" data-r="globals.size.notebook"><span class="linebreak"></span>
+					<label_a><?php echo $this->__('Default tablet content width', 'revslider');?></label_a><input type="text" class="easyinit globalinput" data-numeric="true" data-allowed="px" data-min="0" data-max="2400" data-r="globals.size.tablet"><span class="linebreak"></span>
+					<label_a><?php echo $this->__('Default mobile content width', 'revslider');?></label_a><input type="text" class="easyinit globalinput" data-numeric="true" data-allowed="px" data-min="0" data-max="2400" data-r="globals.size.mobile"><span class="linebreak"></span>
+
+				</div>
+
+				<div id="rbm_globalsettings_savebtn"><i class="material-icons mr10">save</i><span class="rbm_cp_save_text"><?php echo $this->__('Save Global Settings', 'revslider');?></span></div>
+			</div>
+		</div>
+	</div>
+</div>

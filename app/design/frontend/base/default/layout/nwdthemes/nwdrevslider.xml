@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<layout version="1.0.0">
+	<nwdrevslider_default>
+		<reference name="head">
+			<action method="addItem"><type>js</type><name>nwdthemes/jquery-1.12.4.min.js</name></action>
+			<action method="addItem"><type>js</type><name>nwdthemes/jquery-migrate-1.2.1.min.js</name></action>
+			<action method="addItem"><type>js</type><name>nwdthemes/jquery.noconflict.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>nwdthemes/revslider/public/assets/js/revolution.tools.min.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>nwdthemes/revslider/public/assets/js/rs6.min.js</name></action>
+            <action method="addItem"><type>skin_css</type><name>nwdthemes/revslider/public/assets/css/rs6.css</name></action>
+            <block type="core/text" name="nwdthemes-revslider-head"><action method="setText"><text helper="nwdrevslider/data/getHeadIncludes"></text></action></block>
+		</reference>
+	</nwdrevslider_default>
+</layout>
