@@ -44,7 +44,7 @@ class Nwdthemes_Revslider_Block_Adminhtml_Cms_Wysiwyg_Images_Content_Uploader ex
         $this->getUploaderConfig()
             ->setFileParameterName('image')
             ->setTarget(
-                Mage::getModel('adminhtml/url')->addSessionParam()->getUrl('*/*/upload', array('type' => $type))
+                Mage::getModel('adminhtml/url')->getUrl('*/*/upload', array('type' => $type))
             );
         $this->getButtonConfig()
             ->setAttributes(array(
